@@ -1,6 +1,6 @@
 console.log("Juego de piedra, papel y tijeras\n");
 
-let usuario = "piedra";
+let jugador1 = "piedra";
 
 //inciar blucle de juego hasta que el usuario elija terminar
 
@@ -26,43 +26,56 @@ function playMachine(maquina){
 }
 
 let num = getRandomNum(1,3);
-console.log(playMachine(num));
+var jugador2 = playMachine(num);
 
-/*if (usuario == maquina) {
-    console.log(`Usted eligio: ${usuario}`);
-    console.log(`La maquina eligio: ${maquina}`);
-    console.log("Empate!");
+//inicio de juego y comparación de respuestas
+function playJugador2(jugador2){
+    if (jugador1 === jugador2){
+        console.log(`Usted eligio: ${jugador1}`);
+        console.log(`La maquina eligio: ${jugador2}`);
+        console.log("Empate!");
+    }
+
+    switch (jugador1){
+        case "tijeras":
+            if (jugador2 === "piedra"){
+                console.log(`Usted eligio: ${jugador1}`);
+                console.log(`La maquina eligio: ${jugador2}`);
+                console.log("Gana máquina!");
+            } else if(jugador2 === "papel"){
+                console.log(`Usted eligio: ${jugador1}`);
+                console.log(`La maquina eligio: ${jugador2}`);
+                console.log("Gana usuario!");
+            }
+            break;
+
+        case "papel":
+            if(jugador2 === "piedra"){
+                console.log(`Usted eligio: ${jugador1}`);
+                console.log(`La maquina eligio: ${jugador2}`);
+                console.log("Gana usuario!");
+            } else if(jugador2 === "tijeras"){
+                console.log(`Usted eligio: ${jugador1}`);
+                console.log(`La maquina eligio: ${jugador2}`);
+                console.log("Gana máquina!");
+            }
+            break;
+
+        case "piedra":
+            if(jugador2 === "tijeras"){
+                console.log(`Usted eligio: ${jugador1}`);
+                console.log(`La maquina eligio: ${jugador2}`);
+                console.log("Gana usuario!");
+            } else if(jugador2 === "papel"){
+                console.log(`Usted eligio: ${jugador1}`);
+                console.log(`La maquina eligio: ${jugador2}`);
+                console.log("Gana máquina!");
+            }
+            break;
+
+        default:
+            console.log("Jugada inválida!");
+    }
 }
 
-//Piedra
-else if (usuario == "tijeras" && maquina == "piedra"){
-    console.log(`Usted eligio: ${usuario}`);
-    console.log(`La maquina eligio: ${maquina}`);
-    console.log("Gana máquina!");
-} else if(usuario == "papel" && maquina == "piedra"){
-    console.log(`Usted eligio: ${usuario}`);
-    console.log(`La maquina eligio: ${maquina}`);
-    console.log("Gana usuario!");
-}
-
-//Papel
-else if (usuario == "piedra" && maquina == "papel"){
-    console.log(`Usted eligio: ${usuario}`);
-    console.log(`La maquina eligio: ${maquina}`);
-    console.log("Gana maquina!");
-} else if(usuario == "tijeras" && maquina == "papel"){
-    console.log(`Usted eligio: ${usuario}`);
-    console.log(`La maquina eligio: ${maquina}`);
-    console.log("Gana usuario!");
-}
-
-//tijeras
-else if (usuario == "piedra" && maquina == "tijeras"){
-    console.log(`Usted eligio: ${usuario}`);
-    console.log(`La maquina eligio: ${maquina}`);
-    console.log("Gana usuario!");
-} else if(usuario == "papel" && maquina == "tijeras"){
-    console.log(`Usted eligio: ${usuario}`);
-    console.log(`La maquina eligio: ${maquina}`);
-    console.log("Gana maquina!");
-}*/
+playJugador2(jugador2);
