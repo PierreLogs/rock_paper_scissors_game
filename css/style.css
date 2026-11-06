@@ -1,0 +1,98 @@
+:root{
+    --background: #111827; /*Fondo*/
+    --primary: #7C3AED;
+    --secondary: #06B6D4;
+    --win: #22C55E; /*Victoria*/
+    --lose: #EF4444; /*Derrota*/
+    --tie: #f59e0b; /*Empate*/
+    --text: #F9FAFB; /*No hace falta traducir...*/
+    --cards: #1F2937; /*Color de fondo de los cards*/
+    --grotesk: "Space Grotesk";
+}
+
+/*Reset*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+    font-family: var(--grotesk), sans-serif;
+    color: var(--text);
+}
+
+.game{
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    border:1px solid yellowgreen;
+}
+
+.game > .game__players > .player1{
+    color:var(--secondary);
+    background-color: var(--secondary);
+    border-radius: 15px;
+    height:150px;
+    width:150px;
+}
+
+.game > .game__players > .player2{
+    color:var(--primary);
+    background-color: var(--primary);
+    border-radius: 15px;
+    height:150px;
+    width:150px;
+}
+
+.game > .game__players > .game__vs{
+    font-size:24px;
+}
+
+.game > .game__text{
+    padding:1rem;
+}
+
+.options{
+    height:40vh;
+    padding:1rem;
+}
+
+.options > .options__text {
+    padding: 0 0 3rem 0;
+    font-size:24px;
+    text-align: center;
+}
+
+.options__btn{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.options__btn > button{
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--cards);
+    border-radius:10px;
+    border:1px solid yellowgreen;
+}
+
+.options__btn > button:hover{
+    background-color:yellowgreen;
+}
+
+.options__btn > button:focus{
+    background-color:yellow;
+}
+
+.options__btn > button > img{
+    width:5vw;
+}
+
+footer > p{
+    text-align: center;
+}
