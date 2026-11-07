@@ -23,13 +23,68 @@ body{
     color: var(--text);
 }
 
+.main_intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:2rem;
+}
+
+.cont{
+    display:flex;
+    flex-direction:row;
+    padding:2rem;
+    /*justify-content:space-around;*/
+    justify-content: center;
+    gap:1rem;
+    /*border:1px solid yellowgreen;*/
+}
+
+.cont > .cont__box{
+    height:15vh;
+    width:24vw;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px;
+    background-color:var(--cards);
+}
+
+.cont > .cont__box > .cont__jugador1{
+    color:var(--secondary);
+    font-size: 2rem;
+    font-weight:900;
+}
+
+.cont > .cont__box > .cont_jugador1_text{
+    font-size:1.5rem;
+    font-weight:900;
+}
+
+.cont > .cont__box >.cont__jugador2{
+    color:var(--primary);
+    font-size: 2rem;
+    font-weight:900;
+}
+
+.cont > .cont__box > .cont_jugador2_text{
+    font-size:1.5rem;
+    font-weight:900;
+}
+
 .game{
-    height: 32vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    border:1px solid yellowgreen;
+}
+
+.game > .game__title{
+    padding:2rem 0;
 }
 
 .game > .game__players > .player1{
@@ -53,16 +108,16 @@ body{
 }
 
 .game > .game__text{
-    padding:1rem;
+    padding:2rem;
 }
 
 .options{
     height:40vh;
-    padding:1rem;
+    padding:2rem;
 }
 
 .options > .options__text {
-    padding: 0 0 3rem 0;
+    padding: 0 0 2rem 0;
     font-size:24px;
     text-align: center;
 }
@@ -70,15 +125,18 @@ body{
 .options__btn{
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap:1rem;
+    /*justify-content: space-evenly;*/
 }
 
 .options__btn > button{
-    height: 10rem;
-    width: 10rem;
+    height: 15vh;
+    width: 10vw;
     background-color: var(--cards);
+    border:none;
     border-radius:10px;
-    border:1px solid yellowgreen;
+    /*border:1px solid yellowgreen;*/
 }
 
 .options__btn > button:hover{
@@ -94,5 +152,6 @@ body{
 }
 
 footer > p{
+    padding-top:0.5rem;
     text-align: center;
 }

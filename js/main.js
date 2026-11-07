@@ -103,10 +103,10 @@ function playJugador2(jugador2){
     //document.getElementById("jugador").innerHTML = jugador1;
     //document.getElementById("maquina").innerHTML = jugador2;
     document.getElementById("jugador").innerHTML =
-        `<img src="${imagenes[jugador1]}" alt="${jugador1}" width="120">`;
+        `<img src="${imagenes[jugador1]}" alt="${jugador1}" width="120" class="cont_jugador1">`;
 
     document.getElementById("maquina").innerHTML =
-        `<img src="${imagenes[jugador2]}" alt="${jugador2}" width="120">`;
+        `<img src="${imagenes[jugador2]}" alt="${jugador2}" width="120" class="cont_jugador2">`;
 }
 
 //Disparar eventos
@@ -130,36 +130,3 @@ tijeras.addEventListener("click", function(){
     let jugador2 = playMachine(num);
     playJugador2(jugador2);
 });
-
-//Permite iniciar luego de la ultima jugada (jugadas totales 5)
-
-/*LIMITE DE JUEGO: el turno máximo es de 5 intentos
-Al finalizar el ultimo intento aparece mensaje flotate
-en caso pierda para comenzar de nuevo. En caso gane los
-5 intentos, mensaje flotante felicitando y agregando
-datos del vencedor, colocandolo en una lista de ganadores.
-*/
-
-
-
-//Testing de cada funcion
-//Función Random
-for(let i=0;i<10;i++){
-    console.log("Random: ",getRandomNum(1,3));
-}
-
-//Función playMachine
-/*
-1 = piedra
-2 = papel
-3 = tijeras
-* */
-console.log("Test máquina 1: ",playMachine(1));
-console.log("Test máquina 2: ",playMachine(2));
-console.log("Test máquina 3: ",playMachine(3));
-
-//Función playJugador2
-jugador1 = "piedra";
-playJugador2("tijeras"); //debería ganar jugador1
-playJugador2("papel"); //debería ganar jugador2
-playJugador2("piedra"); //empate

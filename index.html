@@ -17,24 +17,24 @@
     </div>
 
     <main>
-      <h2>¡ELIGE TU JUGADA!</h2>
-      <P>¿Podrás vencer a la computadora?</P>
-
-
+      <div class="main_intro">
+        <h2 class="intro__title">¡ELIGE TU JUGADA!</h2>
+        <P class="intro__text">¿Podrás vencer a la computadora?</P>
+      </div>
 
       <div class="cont">
-        <div>
-          <p class="cont_jugador1"><span id="scoreJugador1">0</span></p>
-          <p>JUGADOR</p>
+        <div class="cont__box">
+          <p class="cont__jugador1"><span id="scoreJugador1">0</span></p>
+          <p class="cont_jugador1_text">JUGADOR</p>
         </div>
-        <div>
-          <p class="cont_jugador2"><span id="scoreJugador2">0</span></p>
-          <p>CPU</p>
+        <div class="cont__box">
+          <p class="cont__jugador2"><span id="scoreJugador2">0</span></p>
+          <p class="cont_jugador1_text">MÁQUINA</p>
         </div>
       </div>
 
       <section class="game">
-        <h2>TU JUGADA VS COMPUTADORA</h2>
+        <h2 class="game__title">TU JUGADA VS COMPUTADORA</h2>
 
         <div class="game__players">
           <span id="jugador" class="player1"></span>
@@ -52,15 +52,15 @@
 
         <div class="options__btn">
           <button id="piedra" class="btn__rock">
-            <img src="./assets/icons/rock.png" alt="scissors image">
+            <img src="./assets/icons/rock_non_bg.png" alt="scissors image">
           </button>
 
           <button id="papel" class="btn__paper">
-            <img src="./assets/icons/paper.png" alt="paper image">
+            <img src="./assets/icons/paper_non_bg.png" alt="paper image">
           </button>
 
           <button id="tijeras" class="btn__scissors">
-            <img src="./assets/icons/scissors.png" alt="scissors image">
+            <img src="./assets/icons/scissors_non_bg.png" alt="scissors image">
           </button>
         </div>
       </section>
