@@ -87,7 +87,7 @@ Durante el desarrollo de este proyecto se practicaron conceptos de:
 
 **Luis Pierre Oscco Lara**
 
-- GitHub: <https://github.com/TU_USUARIO>
+- GitHub: <https://github.com/PierreLogs>
 - Email: <i202502036@cibertec.edu.pe>
 
 ## 📚 Referencias
