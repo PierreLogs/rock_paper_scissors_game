@@ -68,9 +68,7 @@ cd piedra-papel-tijeras
 
 ## 📸 Capturas
 
-```markdown
 ![Pantalla principal](./assets/screenshot/screenshot1.png)
-```
 
 ## 🧠 Aprendizajes aplicados
 
