@@ -1,6 +1,21 @@
+/* Juego de piedra, papel y tijeras
+* Autor: Luis Pierre Oscco Lara
+* Email: i202502036@cibertec.edu.pe
+*
+* Fuentes consultadas:
+* - DEW: Unidad 1 - Tema 1 (Cibertec)
+* - DEW: Unidad 1 - Tema 2 (IES Cibertec)
+* - Javascript Inspirate (Ulises Gascón Gonzales)
+* - Javascript Pocket Reference 3th Edition (David Flanagan)
+* - ElocuentJS 4th edition (Marijn Haverbeke)
+* */
+
 console.log("Juego de piedra, papel y tijeras\n");
 
 let jugador1;
+
+let partida = 0; //Me sirve para controlar la cantidad de partidas jugadas
+let max_partida = 5; //Es el máximo de partidas que se van a jugar, sino seria un juego largo
 
 let scoreJugador1 = 0;
 let scoreJugador2 = 0;
@@ -44,6 +59,9 @@ function playJugador2(jugador2){
         //document.getElementById("resultado").innerHTML = "Empate!";
         resultado.innerHTML = "¡Empate!";
         resultado.style.color="#f59e0b";
+
+        partida++;
+
         return;
     }
 
@@ -63,6 +81,7 @@ function playJugador2(jugador2){
                 scoreJugador1++;
                 document.getElementById("scoreJugador1").textContent = scoreJugador1;
             }
+            partida++;
             break;
 
         case "papel":
@@ -80,6 +99,7 @@ function playJugador2(jugador2){
                 scoreJugador1++;
                 document.getElementById("scoreJugador1").textContent = scoreJugador1;
             }
+            partida++;
             break;
 
         case "piedra":
@@ -97,6 +117,7 @@ function playJugador2(jugador2){
                 scoreJugador1++;
                 document.getElementById("scoreJugador1").textContent = scoreJugador1;
             }
+            partida++;
             break;
 
     }
@@ -107,6 +128,28 @@ function playJugador2(jugador2){
 
     document.getElementById("maquina").innerHTML =
         `<img src="${imagenes[jugador2]}" alt="${jugador2}" width="120" class="cont_jugador2">`;
+
+    console.log("Partidas = ",partida);
+
+    if (partida >= max_partida){
+        let win;
+
+        if (scoreJugador1 > scoreJugador2) {
+            win = "Jugador";
+        } else if (scoreJugador2 > scoreJugador1) {
+            win = "Máquina";
+        } else {
+            win = "Empate";
+        }
+
+        Swal.fire({
+            title: "¡Fin de partidas!",
+            text: `Ganador: ${win}`
+        }).then(() =>{
+            /*utilice la función flecha para evitar que se reiniciara antes de dar click en el boton de 'OK'*/
+            limpiar();
+        })
+    }
 }
 
 //Disparar eventos
@@ -130,3 +173,15 @@ tijeras.addEventListener("click", function(){
     let jugador2 = playMachine(num);
     playJugador2(jugador2);
 });
+
+function limpiar(){
+    partida = 0;
+
+    scoreJugador1 = 0;
+    scoreJugador2 = 0;
+
+    document.getElementById("scoreJugador1").innerHTML = "0";
+    document.getElementById("scoreJugador2").innerHTML = "0";
+    document.getElementById("jugador").innerHTML = "0";
+    document.getElementById("maquina").innerHTML = "0";
+}
