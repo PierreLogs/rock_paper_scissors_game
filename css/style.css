@@ -31,6 +31,10 @@ body{
     padding-top:2rem;
 }
 
+.main_intro > .intro__tips{
+    padding-top:1rem;
+}
+
 .cont{
     display:flex;
     flex-direction:row;
@@ -76,7 +80,7 @@ body{
 }
 
 .game{
-    height: 50vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -112,7 +116,7 @@ body{
 }
 
 .options{
-    height:40vh;
+    height:30vh;
     padding:2rem;
 }
 
